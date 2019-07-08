@@ -1,0 +1,69 @@
+$phone-small: (max-width: 299px);
+$phone: (min-width: 300px) and (max-width: 767px);
+$tablet: (min-width: 768px) and (max-width: 1023px);
+
+body {
+    background-color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width:100%    
+}
+
+.container-item {
+    float: left;  
+    position: relative;
+    width: 20%;
+    .item {
+        background-color: #fff;
+        border: 1px solid #ccc;        
+        margin: 10px;
+        padding: 20px;
+        position: relative;
+        img {
+            width: 100%;
+            @media ($phone) {
+                width: 50%;
+            }
+        }
+    }
+    span {
+        display: block;
+        text-align: center;
+        width: 100%;
+        @media ($phone) {
+            bottom: 0;
+            height: 25px;
+            font-size: 1.5em;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+        }
+        @media ($phone-small) {
+            font-size: 1.2em;
+        }
+    }
+}
+
+.c-xs {
+    @media ($phone),
+    ($phone-small) {
+        width: 100%;
+    }
+    @media ($tablet) {
+        width: 20%;
+    }
+}
+
+.powered-by {
+    float: left;
+    margin: 25px 0;
+    text-align: center;
+    width: 100%;
+    span {
+        margin-top: 10px;
+    }
+}
